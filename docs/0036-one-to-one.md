@@ -65,7 +65,7 @@ Schema::create('profiles', function (Blueprint $table) {
     $table->increments('id');
     $table->timestamps();
 
-    $table->unsignedInteger('author_id')->unique();
+    $table->unsignedBigInteger('author_id')->unique();
     $table->foreign('author_id')->references('id')->on('authors');
 });
 ```        
